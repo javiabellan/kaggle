@@ -1,2 +1,0 @@
-# kaggle
-proyectos de kaggle
