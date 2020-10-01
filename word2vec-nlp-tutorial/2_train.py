@@ -21,7 +21,8 @@ from sklearn.metrics       import roc_auc_score
 from sklearn.model_selection import StratifiedKFold, cross_val_predict
 
 
-df = pd.read_csv("../data/labeledTrainData.tsv", sep='\t')
+
+df = pd.read_csv("../../data/labeledTrainData.tsv", sep='\t')
 x = df["review"].astype(str)
 y = df["sentiment"]
 
@@ -62,5 +63,7 @@ for name, model in models.items():
 	print("")
 
 
-preds.to_csv("oof_preds.csv", index=False)
-results.to_csv("results.csv", index=False)
+results = results.sort_values(by=["AUC"], ascending=False, ignore_index=True)
+
+preds.to_csv("../../results/model_preds.csv", index=False)
+results.to_csv("../../results/model_results.csv", index=False)
