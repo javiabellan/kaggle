@@ -26,7 +26,13 @@ from sklearn.naive_bayes    import GaussianNB
 from sklearn.naive_bayes    import MultinomialNB
 from sklearn.discriminant_analysis import QuadraticDiscriminantAnalysis
 from sklearn.ensemble       import StackingClassifier
-#from pytorch_tabnet.tab_model import TabNetClassifier
+# from pytorch_tabnet.tab_model import TabNetClassifier
+# Vowpal Wabbit
+# LibFFM     # Good for high cardinility categorical (all vars need to be cats)
+
+# RAPIDS CuML
+from cuml import LinearRegression
+
 
 #### TREE
 from sklearn.tree          import DecisionTreeClassifier
